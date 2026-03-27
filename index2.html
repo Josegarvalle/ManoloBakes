@@ -592,10 +592,16 @@
 
     <input class="name-field" type="text" id="nameInput" placeholder="Escribe tu nombre completo...">
     <input class="name-field" type="text" id="storeInput" placeholder="¿A qué tienda perteneces?">
-        <option value="">--Seleccionar--</option>
+        <form action="/enviar-datos" method="post">
+  <label for="opciones">Elige una opción:</label>
+  <select name="seleccionado" id="opciones" required>
+    <option value="">--Seleccionar--</option>
     <option value="valor1">Opción 1</option>
     <option value="valor2">Opción 2</option>
     <option value="valor3">Opción 3</option>
+  </select>
+  <input type="submit" value="Enviar">
+</form>
     <button class="btn-nav btn-next" onclick="startTest()">Comenzar el test →</button>
   </div>
 
